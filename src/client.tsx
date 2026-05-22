@@ -6,8 +6,8 @@ import './index.css'
 
 const rootElement = document.getElementById('app')
 
-if (!rootElement?.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement!)
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement)
   root.render(
     <React.StrictMode>
       <RouterProvider router={router} />
